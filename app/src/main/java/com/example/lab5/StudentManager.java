@@ -276,12 +276,13 @@ public class StudentManager extends AppCompatActivity {
         public View getView(int i, View view, ViewGroup viewGroup) {
             if (view == null) {
                 LayoutInflater inflater = LayoutInflater.from(context);
-                view = inflater.inflate(android.R.layout.simple_list_item_1, viewGroup, false);
+                view = inflater.inflate(R.layout.student_list_item, viewGroup, false);
             }
 
-            TextView txt1 = view.findViewById(android.R.id.text1);
-            txt1.setText(list.get(i).Name);
-
+            TextView name = view.findViewById(R.id.name);
+            name.setText(list.get(i).Name);
+            TextView address = view.findViewById(R.id.address);
+            address.setText(list.get(i).Address);
             return view;
         }
     }
